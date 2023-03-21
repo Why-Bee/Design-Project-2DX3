@@ -26,8 +26,8 @@
 
 // The #define statement PSYSDIV initializes
 // the PLL to the desired frequency.
-#define PSYSDIV 3
-// bus frequency is 480MHz/(PSYSDIV+1) = 480MHz/(3+1) = 120 MHz
+#define PSYSDIV 19
+// bus frequency is 480MHz/(PSYSDIV+1) = 480MHz/(19+1) = 24 MHz
 // IMPORTANT: See Step 6) of PLL_Init().  If you change something, change 480 MHz.
 // IMPORTANT: You can use the 10-bit PSYSDIV value to generate an extremely slow
 // clock, but this may cause the debugger to be unable to connect to the processor

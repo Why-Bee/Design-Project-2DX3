@@ -1,6 +1,7 @@
 // Design Project Deliverable 1
 // For: COMPENG 2DX3 McMaster University, Winter 2023, Design Project
 // By: Yash Bhatia | 19th March, 2023
+// Last Modified: 21st March, 2023
 // Assignment:
 // - Figure out pin assignments
 // - Correctly wire up a motor and pushbutton, choose active Lo or Hi
@@ -10,16 +11,26 @@
 // - If, while the motor is running, the button is not pressed and a 360 degree rotation is achieved, stop the motor anyways.
 
 // Using code by the 2DX3 Instructional/Teaching Team, from Studio 5. 
-// Using code co-written with Ria Saldanha for Lab 6
+// Using code co-written with Ria Saldanha (saldanhr) for Lab 6. 
 
 /*  NOTES
+*   Bus speed based on table- 1st LSB of my student number is 2
+*   This means the bus speed is 24 MHz
+*   Current bus speed is 120 MHz - we must reduce by a factor of 5
+*   This means we must divide by 5. This is done by setting PSYSDIV to 19. See PLL.h
+*   Because of new bus speed, Systick.c has been modified to reflect this. See Systick.c
+*
 *   Pin Assignments based on table- 2nd LSB of my student number is 7
 *   My pin assignments are: 
-*   PF4 for Measurement
-*   PF0 for Additional
+*   PF4 for Measurement LED
+*   PF0 for Additional LED
 *   Both of these are on the board! PF4- D3. PF0- D4.
+*   
+*   Other pins are:
+*   PE0-3: Motor Driver. I don't use port H because it is inconvenient to split the pins up.
+*   PM0: Pushbutton. Will be set in ACTIVE LOW mode. This means that when the button is pressed, the pin will be LOW. Using pull-up resistor.
 *
-*		TODO: Better debouncing- make hardware filter? I heard RC filter is good for this application.
+*	TODO: Better debouncing- make hardware filter? I heard RC filter is good for this application. Capacitor/Inductor add a transient that causes the signal to be filtered out.
 */
 
 #include <stdint.h>
@@ -112,13 +123,13 @@ void motor_rotate(int step, int delay)
 					while(!(GPIO_PORTM_DATA_R & 0x01)){}
           waitState();
         }
-			GPIO_PORTE_DATA_R = 0b00001100;
-			SysTick_Wait10ms(delay);
-			GPIO_PORTE_DATA_R = 0b00000110;
+			GPIO_PORTE_DATA_R = 0b00001001;
 			SysTick_Wait10ms(delay);
 			GPIO_PORTE_DATA_R = 0b00000011;
 			SysTick_Wait10ms(delay);
-			GPIO_PORTE_DATA_R = 0b00001001;
+			GPIO_PORTE_DATA_R = 0b00000110;
+			SysTick_Wait10ms(delay);
+			GPIO_PORTE_DATA_R = 0b00001100;
 			SysTick_Wait10ms(delay);
     }
     return;
@@ -133,16 +144,7 @@ int main (void)
     SysTick_Init(); // initialise systick timer
     PortF0F4_Init(); // initialise Port F pins 0 and 4
     PortM0_Init(); // initialise Port M pins 0 and 1
-    PortH0H1H2H3_Init(); // initialise Port H pins 0, 1, 2, and 3
+    PortE0E1E2E3_Init(); // initialise Port E pins 0, 1, 2, and 3
 
     waitState();
 }
-
-
-
-
-
-
-
-
-

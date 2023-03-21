@@ -27,16 +27,11 @@ Project File Date:  03/21/2023
 <h2>Output:</h2>
 *** Using Compiler 'V6.19', folder: 'C:\Keil_v5\ARM\ARMCLANG\Bin'
 Build target 'Target 1'
-Deliverable1.c(136): error: call to undeclared function 'PortH0H1H2H3_Init'; ISO C99 and later do not support implicit function declarations [-Wimplicit-function-declaration]
-    PortH0H1H2H3_Init(); // initialise Port H pins 0, 1, 2, and 3
-    ^
-Deliverable1.c(136): note: did you mean 'PortE0E1E2E3_Init'?
-Deliverable1.c(58): note: 'PortE0E1E2E3_Init' declared here
-void PortE0E1E2E3_Init(void)
-     ^
-1 error generated.
-compiling Deliverable1.c...
-".\Objects\DesignProject.axf" - 1 Error(s), 0 Warning(s).
+compiling SysTick.c...
+compiling PLL.c...
+linking...
+Program Size: Code=1388 RO-data=540 RW-data=8 ZI-data=608  
+".\Objects\DesignProject.axf" - 0 Error(s), 0 Warning(s).
 
 <h2>Software Packages used:</h2>
 
@@ -66,7 +61,6 @@ Package Vendor: TexasInstruments
       Source file:   Examples/EmptyMain/main.c
       Source file:   Device/Source/system_msp432e401y.c
       Source file:   Examples/BlinkLED/blinkLED.c
-Target not created.
 Build Time Elapsed:  00:00:00
 </pre>
 </body>

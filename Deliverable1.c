@@ -55,16 +55,16 @@ void PortM0_Init(void)
 		GPIO_PORTM_PUR_R = 0x01;
 }
 
-void PortH0H1H2H3_Init(void)
+void PortE0E1E2E3_Init(void)
 {
-    // initialise Port H pins 0, 1, 2, and 3
+    // initialise Port E pins 0, 1, 2, and 3
     // outputs to the motor driver
-    SYSCTL_RCGCGPIO_R |= SYSCTL_RCGCGPIO_R7; // enable clock to GPIOH
-    while ((SYSCTL_PRGPIO_R & SYSCTL_PRGPIO_R7) == 0) {}; // wait for clock to stabilise
-    // set PH0, PH1, PH2, and PH3 as digital pins
-    GPIO_PORTH_DEN_R = 0x0F; // 0x0F = 0000 1111
-    // set PH0, PH1, PH2, and PH3 as output to drive motor
-    GPIO_PORTH_DIR_R = 0x0F;
+    SYSCTL_RCGCGPIO_R |= SYSCTL_RCGCGPIO_R4; // enable clock to GPIOE
+    while ((SYSCTL_PRGPIO_R & SYSCTL_PRGPIO_R4) == 0) {}; // wait for clock to stabilise
+    // set PE0, PE1, PE2, and PE3 as digital pins
+    GPIO_PORTE_DEN_R = 0x0F; // 0x0F = 0000 1111
+    // set PE0, PE1, PE2, and PE3 as output to drive motor
+    GPIO_PORTE_DIR_R = 0x0F;
     return;
 }
 
@@ -90,7 +90,7 @@ void waitState(void)
 {
     while (1) // wait for PM0 to be pressed to turn motor back on
     {
-				GPIO_PORTH_DATA_R = 0x0; // turn off the motor when in wait state to prevent magnets from being on for long!
+				GPIO_PORTE_DATA_R = 0x0; // turn off the motor when in wait state to prevent magnets from being on for long!
         if (!(GPIO_PORTM_DATA_R & 0x01)) // motor restarts if PM0 is pressed
         {
             while(!(GPIO_PORTM_DATA_R & 0x01)){}
@@ -112,13 +112,13 @@ void motor_rotate(int step, int delay)
 					while(!(GPIO_PORTM_DATA_R & 0x01)){}
           waitState();
         }
-			GPIO_PORTH_DATA_R = 0b00001100;
+			GPIO_PORTE_DATA_R = 0b00001100;
 			SysTick_Wait10ms(delay);
-			GPIO_PORTH_DATA_R = 0b00000110;
+			GPIO_PORTE_DATA_R = 0b00000110;
 			SysTick_Wait10ms(delay);
-			GPIO_PORTH_DATA_R = 0b00000011;
+			GPIO_PORTE_DATA_R = 0b00000011;
 			SysTick_Wait10ms(delay);
-			GPIO_PORTH_DATA_R = 0b00001001;
+			GPIO_PORTE_DATA_R = 0b00001001;
 			SysTick_Wait10ms(delay);
     }
     return;

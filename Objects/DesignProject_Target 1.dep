@@ -1,0 +1,26 @@
+Dependencies for Project 'DesignProject', Target 'Target 1': (DO NOT MODIFY !)
+CompilerVersion: 6190000::V6.19::ARMCLANG
+F (.\PLL.c)(0x641999FA)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__EVAL -gdwarf-4 -O0 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier-I./RTE/_Target_1-IC:/Users/ybhat/AppData/Local/Arm/Packs/ARM/CMSIS/5.9.0/CMSIS/Core/Include-IC:/Users/ybhat/AppData/Local/Arm/Packs/TexasInstruments/MSP432E4_DFP/3.2.6/Device/Include-D__UVISION_VERSION="538" -D_RTE_ -D_RTE_ -D__MSP432E401Y__-o ./objects/pll.o -MD)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x6388FFD8)
+I (PLL.h)(0x63FE3D1A)
+F (.\PLL.h)(0x63FE3D1A)()
+F (.\SysTick.c)(0x64199A02)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__EVAL -gdwarf-4 -O0 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier-I./RTE/_Target_1-IC:/Users/ybhat/AppData/Local/Arm/Packs/ARM/CMSIS/5.9.0/CMSIS/Core/Include-IC:/Users/ybhat/AppData/Local/Arm/Packs/TexasInstruments/MSP432E4_DFP/3.2.6/Device/Include-D__UVISION_VERSION="538" -D_RTE_ -D_RTE_ -D__MSP432E401Y__-o ./objects/systick.o -MD)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x6388FFD8)
+F (.\SysTick.h)(0x64193600)()
+F (.\tm4c1294ncpdt.h)(0x64199993)()
+F (.\Deliverable1.c)(0x6419BEBE)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__EVAL -gdwarf-4 -O0 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier-I./RTE/_Target_1-IC:/Users/ybhat/AppData/Local/Arm/Packs/ARM/CMSIS/5.9.0/CMSIS/Core/Include-IC:/Users/ybhat/AppData/Local/Arm/Packs/TexasInstruments/MSP432E4_DFP/3.2.6/Device/Include-D__UVISION_VERSION="538" -D_RTE_ -D_RTE_ -D__MSP432E401Y__-o ./objects/deliverable1.o -MD)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x6388FFD8)
+I (SysTick.h)(0x64193600)
+I (PLL.h)(0x63FE3D1A)
+I (tm4c1294ncpdt.h)(0x64199993)
+F (RTE/Device/MSP432E401Y/startup_msp432e401y_uvision.s)(0x59E5010C)(--target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -masm=auto  -Wa,armasm,--diag_suppress=A1950W -c-gdwarf-4 -Wa,armasm,--pd,"__EVAL SETA 1"-I./RTE/_Target_1-IC:/Users/ybhat/AppData/Local/Arm/Packs/ARM/CMSIS/5.9.0/CMSIS/Core/Include-IC:/Users/ybhat/AppData/Local/Arm/Packs/TexasInstruments/MSP432E4_DFP/3.2.6/Device/Include-Wa,armasm,--pd,"__UVISION_VERSION SETA 538" -Wa,armasm,--pd,"_RTE_ SETA 1" -Wa,armasm,--pd,"_RTE_ SETA 1" -Wa,armasm,--pd,"__MSP432E401Y__ SETA 1"-o ./objects/startup_msp432e401y_uvision.o)
+F (RTE/Device/MSP432E401Y/system_msp432e401y.c)(0x5B69F95C)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__EVAL -gdwarf-4 -O0 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier-I./RTE/_Target_1-IC:/Users/ybhat/AppData/Local/Arm/Packs/ARM/CMSIS/5.9.0/CMSIS/Core/Include-IC:/Users/ybhat/AppData/Local/Arm/Packs/TexasInstruments/MSP432E4_DFP/3.2.6/Device/Include-D__UVISION_VERSION="538" -D_RTE_ -D_RTE_ -D__MSP432E401Y__-o ./objects/system_msp432e401y.o -MD)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x6388FFD8)
+I (C:\Users\ybhat\AppData\Local\Arm\Packs\TexasInstruments\MSP432E4_DFP\3.2.6\Device\Include\msp.h)(0x5B69F95C)
+I (C:\Users\ybhat\AppData\Local\Arm\Packs\TexasInstruments\MSP432E4_DFP\3.2.6\Device\Include\msp432e401y.h)(0x5BC0FEAE)
+I (C:\Users\ybhat\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include\core_cm4.h)(0x627001AE)
+I (C:\Users\ybhat\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include\cmsis_version.h)(0x627001AE)
+I (C:\Users\ybhat\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include\cmsis_compiler.h)(0x627001AE)
+I (C:\Users\ybhat\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include\cmsis_armclang.h)(0x627001AE)
+I (C:\Users\ybhat\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include\mpu_armv7.h)(0x627001AE)
+I (C:\Users\ybhat\AppData\Local\Arm\Packs\TexasInstruments\MSP432E4_DFP\3.2.6\Device\Include\system_msp432e401y.h)(0x5B69F95C)

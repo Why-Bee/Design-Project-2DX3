@@ -410,9 +410,54 @@
               <FilePath>.\tm4c1294ncpdt.h</FilePath>
             </File>
             <File>
-              <FileName>Deliverable1.c</FileName>
+              <FileName>uart.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\Deliverable1.c</FilePath>
+              <FilePath>.\uart.c</FilePath>
+            </File>
+            <File>
+              <FileName>uart.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\uart.h</FilePath>
+            </File>
+            <File>
+              <FileName>vl53l1_platform_2dx4.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\vl53l1_platform_2dx4.c</FilePath>
+            </File>
+            <File>
+              <FileName>vl53l1_platform_2dx4.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\vl53l1_platform_2dx4.h</FilePath>
+            </File>
+            <File>
+              <FileName>vl53l1_types_2dx4.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\vl53l1_types_2dx4.h</FilePath>
+            </File>
+            <File>
+              <FileName>VL53L1X_api.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\VL53L1X_api.c</FilePath>
+            </File>
+            <File>
+              <FileName>VL53L1X_api.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\VL53L1X_api.h</FilePath>
+            </File>
+            <File>
+              <FileName>onboardLEDs.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\onboardLEDs.c</FilePath>
+            </File>
+            <File>
+              <FileName>onboardLEDs.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\onboardLEDs.h</FilePath>
+            </File>
+            <File>
+              <FileName>Deliverable2.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\Deliverable2.c</FilePath>
             </File>
           </Files>
         </Group>
